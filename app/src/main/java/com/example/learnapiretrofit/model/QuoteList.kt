@@ -1,22 +1,16 @@
 package com.example.learnapiretrofit.model
 
-data class QuoteList(
-    val count: Int,
-    val lastItemIndex: Int,
-    val page: Int,
-    val results: List<Result>,
-    val totalCount: Int,
-    val totalPages: Int
+
+data class Info(
+    var name: String? = "",
+    val age: String? = "",
+    val status: String? = "",
+    val address: List<Address>? = null,
 )
 
 
-data class Result(
-    val _id: String,
-    val author: String,
-    val authorSlug: String,
-    val content: String,
-    val dateAdded: String,
-    val dateModified: String,
-    val length: Int,
-    val tags: List<String>
+data class Address(
+    var province: String? = "",
+    var distric: String? = "",
+    var village: String? = "",
 )
